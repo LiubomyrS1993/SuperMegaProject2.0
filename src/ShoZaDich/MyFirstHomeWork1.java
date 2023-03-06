@@ -1,6 +1,6 @@
 package ShoZaDich;
 
-public class MyFirstHome1 {
+public class MyFirstHomeWork1 {
 
     public static void main(String[] args) {
 
