@@ -28,18 +28,17 @@ public class FirstHomeWork {
     public static String buildAirplane(String airPlaneType, String airPlaneModel) {
 
         return airPlaneType + ", model : " + airPlaneModel;
-
     }
+
 
     public static String buildAirplane(String airPlaneType, String airPlaneModel, int ecoClass) {
 
         return airPlaneType + ", model: " + airPlaneModel + ecoClass;
-
     }
+
 
     public static String buildAirplane(String airPlaneType, String airPlaneModel, int ecoClass, int businessClass) {
 
         return airPlaneType + ", model: " + airPlaneModel + ecoClass + businessClass;
-
     }
 }
