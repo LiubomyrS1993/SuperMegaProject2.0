@@ -1,4 +1,4 @@
-package ShoZaDich;
+package Lesson2;
 
 public class MyFirstHomeWork2 {
 
