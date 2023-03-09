@@ -4,11 +4,16 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-public class SecondTaskHomeWork {
+public class Reworked2WithMethodSpecialForTetiana {
+
+    public static final BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
 
     public static void main(String[] args) throws IOException {
 
-        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+        airLuggage();
+
+    }
+    public static void airLuggage() throws IOException {
 
         System.out.println("Provide your height of baggage(centimeter): ");
         int height = Integer.parseInt(reader.readLine());
@@ -29,7 +34,7 @@ public class SecondTaskHomeWork {
 
         }
         else if (height <= 53 && width <= 22 && length <= 40){
-            System.out.println("Cool bro your bag/backpack is suitable for hand luggage ");
+            System.out.println("Cool bro your bag/backpack is suitable for hand luggage");
         }
         else{
             System.out.println("Yom must pay for your luggage");
