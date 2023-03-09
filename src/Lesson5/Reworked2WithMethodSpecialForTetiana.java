@@ -10,36 +10,29 @@ public class Reworked2WithMethodSpecialForTetiana {
 
     public static void main(String[] args) throws IOException {
 
-        airLuggage();
+        int height = inputBagLuggage("Input height: ");
+        int weight = inputBagLuggage("Input weight: ");
+        int length = inputBagLuggage("Input length: ");
 
+        printDimensionsForLuggage(height, weight, length);
     }
-    public static void airLuggage() throws IOException {
+    public static int inputBagLuggage(String message) throws IOException {
+        System.out.println(message);
+        int dimensions = Integer.parseInt(reader.readLine());
+        return dimensions;
+    }
 
-        System.out.println("Provide your height of baggage(centimeter): ");
-        int height = Integer.parseInt(reader.readLine());
-        System.out.println("your height of baggage is: " + height);
+    public static void printDimensionsForLuggage(int height, int width, int length){
 
-        System.out.println("Provide your width of baggage(centimeter): ");
-        int width = Integer.parseInt(reader.readLine());
-        System.out.println("your width of baggage is: " + width);
-
-        System.out.println("Provide your length of baggage(centimeter): ");
-        int length = Integer.parseInt(reader.readLine());
-        System.out.println("your length of baggage is: " + length);
-
-
-        if(height <= 40 && width <= 20 && length <= 55){
-
+        if (height <= 40 && width <= 20 && length <= 55){
             System.out.println("Cool bro your bag/backpack is suitable for hand luggage");
 
-        }
-        else if (height <= 53 && width <= 22 && length <= 40){
+        } else if (height <= 53 && width <= 22 && length <= 40){
             System.out.println("Cool bro your bag/backpack is suitable for hand luggage");
-        }
-        else{
+
+        } else{
             System.out.println("Yom must pay for your luggage");
         }
-
     }
 
 }

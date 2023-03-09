@@ -10,51 +10,40 @@ public class Reworked1HomeWorkWithMethodSpecialForTetiana {
 
     public static void main(String[] args) throws IOException {
 
+        float chemistry = inputYourRates("Input your chemistry rate: ");
+        float math = inputYourRates("Input your math rate: ");
+        float history = inputYourRates("Input your history rate: ");
+        float physics = inputYourRates("Input your physics rate: ");
+        float biology = inputYourRates("Input your biology rate: ");
 
-        averageRate();
+        float result = countAverageRate(chemistry, math, history, physics, biology);
+        printTypeScholarship(result);
 
     }
 
+    private static float inputYourRates(String message) throws IOException {
+        System.out.println(message);
+        float rates = Integer.parseInt(reader.readLine());
+        return rates;
+    }
 
-    private static float averageRate() throws IOException {
-
-        System.out.println("Provide your math points: ");
-
-
-        float math1 = Integer.parseInt(reader.readLine());
-        System.out.println("Your math points is: " + math1);
-
-        System.out.println("Provide your biology points: ");
-
-        float biology1 = Integer.parseInt(reader.readLine());
-        System.out.println("Your biology points is: " + biology1);
-
-        System.out.println("Provide your history points: ");
-
-        float history1 = Integer.parseInt(reader.readLine());
-        System.out.println("Your history points is: " + history1);
-
-        System.out.println("Provide your chemistry points: ");
-
-        float chemistry1 = Integer.parseInt(reader.readLine());
-        System.out.println("Your chemistry points is: " + chemistry1);
-
-        System.out.println("Provide your physics points: ");
-
-        float physics1 = Integer.parseInt(reader.readLine());
-        System.out.println("Your physics points is: " + physics1);
-
-        float result1 = (math1 + biology1 + history1 + chemistry1 + physics1) / 5.0f;
-
-        if (result1 >= 10) {
-            System.out.println("Your average points is: " + result1 + " congratulations!!! You'll get increased scholarship! :D");
-        } else if (result1 >= 8) {
-            System.out.println("Your average points is: " + result1 + " you'll get scholarship. :)");
-        }else {
-            System.out.println("Your average points is: " + result1 + " you're such a loser! :( You'll get nothing and I can say more you'll pay for all.");
+    private static float countAverageRate(float a, float b, float c, float d, float e) {
+        float result = (a + b + c + d + e) / 5;
+        if(a > 12){
+            System.out.println("Please provide a number between 6-12");
         }
 
-        return result1;
+        return result;
+    }
+
+    private static void printTypeScholarship(float result){
+        if (result >= 10) {
+            System.out.println("Your average points is: " + result + " congratulations!!! You'll get increased scholarship! :D");
+        } else if (result >= 8) {
+            System.out.println("Your average points is: " + result + " you'll get scholarship. :)");
+        }else {
+            System.out.println("Your average points is: " + result + " you're such a loser! :( You'll get nothing and I can say more you'll pay for all.");
+        }
     }
 
 }
