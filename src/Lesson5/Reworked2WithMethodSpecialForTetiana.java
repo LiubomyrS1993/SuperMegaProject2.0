@@ -14,25 +14,22 @@ public class Reworked2WithMethodSpecialForTetiana {
         int weight = inputBagLuggage("Input weight: ");
         int length = inputBagLuggage("Input length: ");
 
-        printDimensionsForLuggage(height, weight, length);
+        String message = printDimensionsForLuggage(height, weight, length) ?
+                ("Cool bro your bag/backpack is suitable for hand luggage") :
+                ("Yom must pay for your luggage");
+        System.out.println(message);
+
+
     }
+
     public static int inputBagLuggage(String message) throws IOException {
         System.out.println(message);
         int dimensions = Integer.parseInt(reader.readLine());
         return dimensions;
     }
 
-    public static void printDimensionsForLuggage(int height, int width, int length){
-
-        if (height <= 40 && width <= 20 && length <= 55){
-            System.out.println("Cool bro your bag/backpack is suitable for hand luggage");
-
-        } else if (height <= 53 && width <= 22 && length <= 40){
-            System.out.println("Cool bro your bag/backpack is suitable for hand luggage");
-
-        } else{
-            System.out.println("Yom must pay for your luggage");
-        }
+    public static boolean printDimensionsForLuggage(int height, int width, int length) {
+        return height <= 40 && width <= 20 && length <= 55 || height <= 53 && width <= 22 && length <= 40;
     }
 
 }
