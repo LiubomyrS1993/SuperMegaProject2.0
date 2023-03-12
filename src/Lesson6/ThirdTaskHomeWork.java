@@ -6,13 +6,13 @@ import java.io.InputStreamReader;
 
 public class ThirdTaskHomeWork {
 
-    public static final BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+    public static final BufferedReader READER = new BufferedReader(new InputStreamReader(System.in));
 
 
     public static void main(String[] args) throws IOException {
 
         System.out.println("enter number: ");
-        int apples = Integer.parseInt(reader.readLine());
+        int apples = Integer.parseInt(READER.readLine());
 
         int largeJars = countBigJars(apples);
         int leftOver = apples % 5;
