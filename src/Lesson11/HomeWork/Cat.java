@@ -16,8 +16,8 @@ public class Cat {
         this.name = name;
         this.age = age;
         this.weight = weight;
-
     }
+
     public Cat(String name, int age){
         this.name = name;
         this.age = age;
