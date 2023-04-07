@@ -1,34 +1,39 @@
 package Library;
 
-import java.awt.print.Book;
 import java.util.ArrayList;
 
-public class Author extends LibraryItem {
-    private String firstName;
-    private String lastName;
+public class Author {
+    private String surname;
+    private String name;
     private ArrayList<Book> books;
 
-    public Author(String firstName, String lastName, ArrayList<Book> books) {
-        super(firstName + " " + lastName);
-        this.firstName = firstName;
-        this.lastName = lastName;
-        this.books = books;
+    public Author(String surname, String name) {
+        this.surname = surname;
+        this.name = name;
+        this.books = new ArrayList<Book>();
     }
 
-    public String getFirstName() {
-        return firstName;
+    public String getSurname() {
+        return surname;
     }
 
-    public String getLastName() {
-        return lastName;
+    public String getName() {
+        return name;
     }
 
     public ArrayList<Book> getBooks() {
         return books;
     }
 
-    @Override
-    public void display() {
-        System.out.println(getName());
+    public void addBook(Book book) {
+        books.add(book);
+    }
+
+    public void removeBook(Book book) {
+        books.remove(book);
+    }
+
+    public void removeAllBooks() {
+        books.clear();
     }
 }
